@@ -15,7 +15,7 @@
         <div
           *ngFor="let cell of row; let j = index"
           class="cell"
-          [ngStyle]="{'background-color': cell.status}"
+          [ngStyle]="{'background-color': cell.status, 'animation-delay': getAnimationDelay(i, j), '--x-direction': cell.xDirection, '--y-direction': cell.yDirection}"
           (click)="onCellClick(i, j)"
         ></div>
       </div>

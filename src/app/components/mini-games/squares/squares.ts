@@ -140,6 +140,13 @@ export class Squares implements OnInit, OnDestroy {
     this.isSettingsApplied = true;
   }
 
+  getAnimationDelay(row: number, col: number): string {
+    const centerX = Math.floor(this.gridSize[0] / 2);
+    const centerY = Math.floor(this.gridSize[1] / 2);
+    const distance = Math.abs(row - centerX) + Math.abs(col - centerY);
+    return `${distance * 50}ms`;
+  }
+
   ngOnDestroy(): void {
     if (this.gameTimeout) {
       clearTimeout(this.gameTimeout);

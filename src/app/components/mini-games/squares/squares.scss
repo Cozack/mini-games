@@ -26,20 +26,18 @@
   width: 50px;
   height: 50px;
   border: 1px solid #ccc;
+  opacity: 0;
+  animation: slide-in-to-center 0.5s ease-out forwards;
 }
 
-.blue {
-  background-color: blue;
-}
+@keyframes slide-in-to-center {
+  0% {
+    transform: translate(10%, 30%);
+    opacity: 0;
+  }
 
-.yellow {
-  background-color: yellow;
-}
-
-.green {
-  background-color: green;
-}
-
-.red {
-  background-color: red;
+  100% {
+    transform: translate(50%, 100%);
+    opacity: 1;
+  }
 }
