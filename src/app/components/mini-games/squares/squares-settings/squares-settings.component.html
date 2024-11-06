@@ -1,0 +1,37 @@
+<div class="modal-container">
+  <h2 class="modal-container--title">Settings</h2>
+  <div>
+    <label>Field size (CxR):</label>
+    <input
+      [(ngModel)]="gridSize"
+      placeholder="10x10"
+      (ngModelChange)="validateGridSize()"
+      [ngClass]="{ error: gridSizeError }"
+      [ngStyle]="
+        gridSizeError ? { 'margin-bottom': '1px' } : { 'margin-bottom': '15px' }
+      "
+    />
+    <div *ngIf="gridSizeError" class="error-message">
+      Max field size - 10x13
+    </div>
+  </div>
+  <div>
+    <label>Time (mc):</label>
+    <input [(ngModel)]="timeLimit" type="number" placeholder="1000" />
+  </div>
+  <div>
+    <label>Player name:</label>
+    <input [(ngModel)]="playerName" placeholder="Player" />
+  </div>
+  <div>
+    <label>Computer name:</label>
+    <input [(ngModel)]="computerName" placeholder="Computer" />
+  </div>
+  <div>
+    <label>Field color:</label>
+    <input [(ngModel)]="cellColor" placeholder="blue" />
+  </div>
+  <div>
+    <button [disabled]="gridSizeError" (click)="saveSettings()">Save</button>
+  </div>
+</div>

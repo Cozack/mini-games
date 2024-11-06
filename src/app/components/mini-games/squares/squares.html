@@ -1,0 +1,24 @@
+<div class="game-container">
+  <ng-container *ngIf="isSettingsApplied">
+    <div class="controls">
+      <button (click)="startGame()">Start</button>
+      <button class="exit-btn" routerLink="/">Exit</button>
+    </div>
+
+    <div class="score">
+      <span>{{ playerName }}: {{ playerScore }}</span> |
+      <span>{{ computerName }}: {{ computerScore }}</span>
+    </div>
+
+    <div class="grid">
+      <div *ngFor="let row of grid; let i = index" class="row">
+        <div
+          *ngFor="let cell of row; let j = index"
+          class="cell"
+          [ngStyle]="{'background-color': cell.status}"
+          (click)="onCellClick(i, j)"
+        ></div>
+      </div>
+    </div>
+  </ng-container>
+</div>

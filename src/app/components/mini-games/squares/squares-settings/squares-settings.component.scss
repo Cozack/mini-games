@@ -1,0 +1,45 @@
+.modal-container {
+  padding: 10px;
+
+  &--title {
+    text-align: center;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 370px;
+  margin-bottom: 15px;
+}
+
+input.error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+button:hover {
+  background-color: #45a049;
+}

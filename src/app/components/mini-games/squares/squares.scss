@@ -5,8 +5,14 @@
   padding: 10px;
 }
 
-.controls, .score {
+.controls,
+.score {
   margin-bottom: 15px;
+}
+
+.exit-btn {
+  position: absolute;
+  right: 10px;
 }
 
 .grid {
@@ -36,20 +42,4 @@
 
 .red {
   background-color: red;
-}
-
-.modal {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
 }
